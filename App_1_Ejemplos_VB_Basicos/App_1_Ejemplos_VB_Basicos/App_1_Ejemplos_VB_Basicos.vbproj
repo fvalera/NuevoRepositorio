@@ -71,8 +71,12 @@
     <Compile Include="Ejemplo Calculadora.vb" />
     <Compile Include="EjemploArcotangente.vb" />
     <Compile Include="EjemploAreaCirculo.vb" />
+    <Compile Include="EjemploBooleanos.vb" />
     <Compile Include="EjemploEdadIf.vb" />
     <Compile Include="EjemploEdadSelect.vb" />
+    <Compile Include="EjemploIf.vb" />
+    <Compile Include="EjemploIfNulo.vb" />
+    <Compile Include="EjemploIfString.vb" />
     <Compile Include="EjemploMultiplicar.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
