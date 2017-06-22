@@ -4,7 +4,7 @@
         Dim opcion As Char
         Dim operador As Char
         Dim operando_1, operando_2, resultado As Single
-
+        'Do
         Do
             Console.WriteLine("Introduzca operando 1")
             operando_1 = Console.ReadLine
