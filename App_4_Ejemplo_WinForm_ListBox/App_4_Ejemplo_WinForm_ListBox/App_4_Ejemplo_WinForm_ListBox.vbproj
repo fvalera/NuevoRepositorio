@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEventosRaton.Designer.vb">
+      <DependentUpon>FormEventosRaton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEventosRaton.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormComboListas.Designer.vb">
       <DependentUpon>FormComboListas.vb</DependentUpon>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormEventosRaton.resx">
+      <DependentUpon>FormEventosRaton.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormComboListas.resx">
       <DependentUpon>FormComboListas.vb</DependentUpon>
     </EmbeddedResource>
