@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms
+Imports App_WinForms_RRHH.Modelo
 
 Public Class MDIPrincipal
     Dim frmAlta As Form_Alta
@@ -21,7 +22,9 @@ Public Class MDIPrincipal
         AbrirFormulario(Of Form_Baja)(frmBaja)
     End Sub
 
-
+    Private Sub MDIPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        EmpleadosCRUD.Restaurar()
+    End Sub
 
 
     'Código autogenerado
@@ -107,5 +110,6 @@ Public Class MDIPrincipal
     End Sub
 
     Private m_ChildFormNumber As Integer
+
 
 End Class

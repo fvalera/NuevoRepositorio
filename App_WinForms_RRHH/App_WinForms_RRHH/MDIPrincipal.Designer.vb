@@ -53,6 +53,9 @@ Partial Class MDIPrincipal
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AltaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -80,9 +83,6 @@ Partial Class MDIPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -300,6 +300,24 @@ Partial Class MDIPrincipal
         Me.BajaToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
         Me.BajaToolStripMenuItem.Text = "Baja"
         '
+        'ModificaciónToolStripMenuItem
+        '
+        Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
+        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ModificaciónToolStripMenuItem.Text = "Modificación"
+        '
+        'BuscarToolStripMenuItem
+        '
+        Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.BuscarToolStripMenuItem.Text = "Buscar"
+        '
+        'ListarToolStripMenuItem
+        '
+        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ListarToolStripMenuItem.Text = "Listar"
+        '
         'ToolsMenu
         '
         Me.ToolsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem})
@@ -484,24 +502,6 @@ Partial Class MDIPrincipal
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
-        '
-        'ModificaciónToolStripMenuItem
-        '
-        Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
-        Me.ModificaciónToolStripMenuItem.Text = "Modificación"
-        '
-        'BuscarToolStripMenuItem
-        '
-        Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
-        Me.BuscarToolStripMenuItem.Text = "Buscar"
-        '
-        'ListarToolStripMenuItem
-        '
-        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
-        Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'MDIPrincipal
         '

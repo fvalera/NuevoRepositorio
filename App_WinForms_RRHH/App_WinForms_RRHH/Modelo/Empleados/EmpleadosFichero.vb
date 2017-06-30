@@ -6,7 +6,7 @@
         Function GrabarFichero(ByVal arrayEmpleados() As Empleado, ByVal nombreFichero As String) As Boolean
 
             Dim fichero As System.IO.StreamWriter
-            fichero = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\sinensia100\" & nombreFichero, False)
+            fichero = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\sinensia107\" & nombreFichero, False)
 
             For i = 0 To arrayEmpleados.Length - 1 Step 1
                 fichero.WriteLine(arrayEmpleados(i).nombre & "," &
