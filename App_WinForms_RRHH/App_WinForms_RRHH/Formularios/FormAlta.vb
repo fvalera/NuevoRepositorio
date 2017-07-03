@@ -36,4 +36,12 @@ Public Class Form_Alta
         domCategoría.Text = ""
         numRetrFija.Value = 0
     End Sub
+
+    Private Sub ActivarseFormulario(sender As Object, e As EventArgs) Handles Me.Activated
+        Me.MdiParent.Text = "Alta Empleado"
+    End Sub
+
+    Private Sub DesctivarseFormulario(sender As Object, e As EventArgs) Handles Me.Deactivate
+        Me.MdiParent.Text = "Aplicación Empleados"
+    End Sub
 End Class
