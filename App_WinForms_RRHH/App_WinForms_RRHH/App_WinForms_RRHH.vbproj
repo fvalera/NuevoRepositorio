@@ -84,6 +84,12 @@
     <Compile Include="Formularios\FormBaja.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FormLista.Designer.vb">
+      <DependentUpon>FormLista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormLista.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MDIPrincipal.Designer.vb">
       <DependentUpon>MDIPrincipal.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormBaja.resx">
       <DependentUpon>FormBaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormLista.resx">
+      <DependentUpon>FormLista.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIPrincipal.resx">
       <DependentUpon>MDIPrincipal.vb</DependentUpon>

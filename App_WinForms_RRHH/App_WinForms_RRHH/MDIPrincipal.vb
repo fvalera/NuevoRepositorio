@@ -4,7 +4,8 @@ Imports App_WinForms_RRHH.Modelo
 Public Class MDIPrincipal
     Dim frmAlta As Form_Alta
     Dim frmBaja As Form_Baja
-    Private Function AbrirFormulario(Of TForm As {Form, New})(ByRef form As Form)
+    Dim frmLista As FormLista
+    Private Sub AbrirFormulario(Of TForm As {Form, New})(ByRef form As Form)
         If form Is Nothing OrElse form.IsDisposed() Then
             form = New TForm
             form.MdiParent = Me
@@ -13,7 +14,10 @@ Public Class MDIPrincipal
             form.Show()
             ActivateMdiChild(form)
         End If
-    End Function
+    End Sub
+    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
+        AbrirFormulario(Of FormLista)(frmLista)
+    End Sub
     Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
         AbrirFormulario(Of Form_Alta)(frmAlta)
     End Sub

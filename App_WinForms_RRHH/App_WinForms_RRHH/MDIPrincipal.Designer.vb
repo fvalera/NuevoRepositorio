@@ -47,6 +47,7 @@ Partial Class MDIPrincipal
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CambiarFuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -88,7 +89,6 @@ Partial Class MDIPrincipal
         Me.BajaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.CambiarFuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -259,6 +259,12 @@ Partial Class MDIPrincipal
         Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
         Me.SelectAllToolStripMenuItem.Text = "Seleccionar &todo"
         '
+        'CambiarFuenteToolStripMenuItem
+        '
+        Me.CambiarFuenteToolStripMenuItem.Name = "CambiarFuenteToolStripMenuItem"
+        Me.CambiarFuenteToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.CambiarFuenteToolStripMenuItem.Text = "Cambiar Fuente"
+        '
         'ViewMenu
         '
         Me.ViewMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem})
@@ -286,7 +292,7 @@ Partial Class MDIPrincipal
         '
         'EmpleadoToolStripMenuItem
         '
-        Me.EmpleadoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaToolStripMenuItem, Me.BajaToolStripMenuItem, Me.ModificaciónToolStripMenuItem, Me.BuscarToolStripMenuItem, Me.ListarToolStripMenuItem})
+        Me.EmpleadoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaToolStripMenuItem, Me.BajaToolStripMenuItem, Me.ListarToolStripMenuItem, Me.ModificaciónToolStripMenuItem, Me.BuscarToolStripMenuItem})
         Me.EmpleadoToolStripMenuItem.Enabled = False
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
         Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
@@ -297,7 +303,7 @@ Partial Class MDIPrincipal
         Me.AltaToolStripMenuItem.Name = "AltaToolStripMenuItem"
         Me.AltaToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.AltaToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.AltaToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.AltaToolStripMenuItem.Text = "Alta"
         '
         'BajaToolStripMenuItem
@@ -305,25 +311,27 @@ Partial Class MDIPrincipal
         Me.BajaToolStripMenuItem.Name = "BajaToolStripMenuItem"
         Me.BajaToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.BajaToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.BajaToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.BajaToolStripMenuItem.Text = "Baja"
         '
         'ModificaciónToolStripMenuItem
         '
         Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'BuscarToolStripMenuItem
         '
         Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.BuscarToolStripMenuItem.Text = "Buscar"
         '
         'ListarToolStripMenuItem
         '
         Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ListarToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'ToolsMenu
@@ -544,12 +552,6 @@ Partial Class MDIPrincipal
         Me.LinkLabel1.TabIndex = 13
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Enlace BBVA"
-        '
-        'CambiarFuenteToolStripMenuItem
-        '
-        Me.CambiarFuenteToolStripMenuItem.Name = "CambiarFuenteToolStripMenuItem"
-        Me.CambiarFuenteToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
-        Me.CambiarFuenteToolStripMenuItem.Text = "Cambiar Fuente"
         '
         'MDIPrincipal
         '
