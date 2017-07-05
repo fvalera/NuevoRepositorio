@@ -88,6 +88,12 @@
     <Compile Include="Formularios\FormBusqueda.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FormModificacion.Designer.vb">
+      <DependentUpon>FormModificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormModificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MDIPrincipal.Designer.vb">
       <DependentUpon>MDIPrincipal.vb</DependentUpon>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormBusqueda.resx">
       <DependentUpon>FormBusqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormModificacion.resx">
+      <DependentUpon>FormModificacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIPrincipal.resx">
       <DependentUpon>MDIPrincipal.vb</DependentUpon>

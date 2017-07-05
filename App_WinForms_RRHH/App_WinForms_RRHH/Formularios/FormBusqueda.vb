@@ -2,6 +2,19 @@
 Public Class FormBusqueda
 
     Public listaEmpleados As List(Of Empleado)
+    Private empleado As Empleado
+    Public frmMod As FormModificacion
+
+    Private Sub AbrirFormulario(Of TForm As {Form, New})(ByRef form As Form)
+        If form Is Nothing OrElse form.IsDisposed() Then
+            form = New TForm
+            form.MdiParent = MDIPrincipal
+            form.Show()
+        Else
+            form.Show()
+            ActivateMdiChild(form)
+        End If
+    End Sub
     Private Sub ComboBox1_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged, txtApellidos.TextChanged
         BuscarEmpleado()
     End Sub
@@ -28,7 +41,7 @@ Public Class FormBusqueda
         Next
 
         For Each indice In listResultados.SelectedIndices
-            listResultados.Items.RemoveAt(indice)
+            listaEmpleados.RemoveAt(indice)
         Next
         EmpleadosCRUD.Grabar()
     End Sub
@@ -43,7 +56,12 @@ Public Class FormBusqueda
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
-
-
+        For Each indice In listResultados.SelectedIndices
+            AbrirFormulario(Of FormModificacion)(frmMod)
+            frmMod.txtNombre.Text = listaEmpleados(indice).nombre
+            frmMod.txtApellidos.Text = listaEmpleados(indice).apellidos
+            frmMod.cmbGenero.Text = listaEmpleados(indice).genero
+            frmMod.domCategoría.Text = listaEmpleados(indice).categoria
+        Next
     End Sub
 End Class
