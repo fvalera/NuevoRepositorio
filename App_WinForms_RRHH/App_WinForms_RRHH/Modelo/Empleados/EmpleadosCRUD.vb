@@ -27,11 +27,6 @@
         Function Leer(indice As Integer) As Empleado
             Return listaEmpleados(indice)
         End Function
-        'Function BuscarPorCampoEmpleado(valor As String) As Integer
-        '    Dim indiceEmpleado As Integer
-        '    indiceEmpleado = BuscarPorCampoEmpleado(valor, TipoCampoEmpleado.Nombre)
-        '    Return indiceEmpleado
-        'End Function
         Function BuscarEmpleados(nombre As String, apellido As String) As List(Of Empleado)
             nombre = nombre.ToUpper
             apellido = apellido.ToUpper
@@ -54,12 +49,30 @@
                 End If
             Next
         End Function
+
+        Public Function BuscarIndiceEmpleado(nombre As String, apellidos As String) As Integer
+            Dim indice As Integer
+            Dim encontrado As Boolean = False
+            For i = 0 To listaEmpleados.Count - 1
+                If encontrado = False Then
+                    If listaEmpleados(i).nombre = nombre And listaEmpleados(i).apellidos = apellidos Then
+                        indice = i
+                        encontrado = True
+                    Else
+                        indice = -1
+                    End If
+                End If
+            Next
+            Return indice
+        End Function
         Sub Actualizar(indice As Integer, empleado As Empleado)
             listaEmpleados(indice) = empleado
         End Sub
 
         Sub Eliminar(indice As Integer)
-            listaEmpleados.RemoveAt(indice)
+            If indice >= 0 Then
+                listaEmpleados.RemoveAt(indice)
+            End If
         End Sub
 
         Sub eliminar(empleados As List(Of Empleado))

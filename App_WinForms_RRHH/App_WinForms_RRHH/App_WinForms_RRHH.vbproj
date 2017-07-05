@@ -22,7 +22,9 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>App_WinForms_RRHH.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +34,9 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>App_WinForms_RRHH.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -78,16 +82,10 @@
     <Compile Include="Formularios\FormAlta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FormBaja.Designer.vb">
-      <DependentUpon>FormBaja.vb</DependentUpon>
+    <Compile Include="Formularios\FormBusqueda.Designer.vb">
+      <DependentUpon>FormBusqueda.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormBaja.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormLista.Designer.vb">
-      <DependentUpon>FormLista.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FormLista.vb">
+    <Compile Include="Formularios\FormBusqueda.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIPrincipal.Designer.vb">
@@ -121,11 +119,8 @@
     <EmbeddedResource Include="Formularios\FormAlta.resx">
       <DependentUpon>FormAlta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormBaja.resx">
-      <DependentUpon>FormBaja.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormLista.resx">
-      <DependentUpon>FormLista.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\FormBusqueda.resx">
+      <DependentUpon>FormBusqueda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIPrincipal.resx">
       <DependentUpon>MDIPrincipal.vb</DependentUpon>
