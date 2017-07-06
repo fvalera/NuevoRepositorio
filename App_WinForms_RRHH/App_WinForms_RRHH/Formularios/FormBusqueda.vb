@@ -67,7 +67,7 @@ Public Class FormBusqueda
             frmMod.txtApellidos.Text = listaEmpleados(indice).apellidos
             frmMod.cmbGenero.Text = listaEmpleados(indice).genero.ToString
             frmMod.domCategoría.Text = listaEmpleados(indice).categoria.ToString
-            frmMod.empleadoOrigen = New Empleado(listaEmpleados(indice).nombre, listaEmpleados(indice).apellidos, listaEmpleados(indice).genero, listaEmpleados(indice).categoria)
+            frmMod.empleadoOrigen = listaEmpleados(indice)
         Next
     End Sub
 End Class

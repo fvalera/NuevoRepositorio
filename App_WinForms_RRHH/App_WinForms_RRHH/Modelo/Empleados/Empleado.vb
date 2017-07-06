@@ -1,13 +1,20 @@
 ﻿Namespace Modelo
     ' Nuevo tipo de variable, inventado por nosotros. 
-    Public Structure Empleado
+    Public Class Empleado
         Public nombre As String
         Public apellidos As String
         Public genero As TipoGenero
         Public categoria As TipoCategoria
         Public retribucionFija As Single
 
-        ' Constructor
+        ' Constructores
+        Public Sub New()
+            nombre = ""
+            apellidos = ""
+            genero = 1
+            categoria = 1
+            retribucionFija = 0
+        End Sub
         Public Sub New(nuevoNombre As String, nuevoApell As String, nuevoGenero As TipoGenero, nuevaCategoria As TipoCategoria)
             nombre = nuevoNombre
             apellidos = nuevoApell
@@ -37,5 +44,5 @@
         Overrides Function ToString() As String
             Return NombreCompleto() + " " & genero.ToString() & " " & categoria.ToString()
         End Function
-    End Structure
+    End Class
 End Namespace

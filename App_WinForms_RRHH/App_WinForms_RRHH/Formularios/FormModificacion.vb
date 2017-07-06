@@ -3,7 +3,7 @@ Public Class FormModificacion
 
     Public empleadoOrigen As Empleado
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-        Dim empleadoModificado As Empleado
+        Dim empleadoModificado As Empleado = New Empleado()
         empleadoModificado.nombre = txtNombre.Text
         empleadoModificado.apellidos = txtApellidos.Text
         empleadoModificado.genero = cmbGenero.SelectedIndex + 1

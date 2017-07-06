@@ -22,7 +22,7 @@
             '   arrayRegistros de tipo cadena
             Dim arrayRegistros() As String
             Dim valorRegistro As String = ""
-            Dim empleado As Empleado = New Empleado()
+            Dim empleado As Empleado
             Dim textoFichero As String
 
             Try
@@ -34,6 +34,7 @@
                     arrayRegistros = textoFichero.Split(vbCrLf)
                     ' Bucle Para numeroRegistro desde 0 hasta ultimo elemento de arrayRegistros
                     For i = 0 To arrayRegistros.Length - 1
+                        empleado = New Empleado()
                         arrayRegistros(i) = arrayRegistros(i).Replace(vbLf, "")
                         '   llamar metodo RellenarConRegistro de empleado pasando como parametro el elemento...
                         '   ...del arrayRegistros(numeroRegistro)
@@ -45,6 +46,7 @@
                             arrayEmpleados(i) = empleado
                         End If
                         ' Fin bucle
+                        MsgBox(empleado.nombre)
                     Next
                 Else
                     MsgBox("No se encuentra el fichero. Ponga un fichero en  C:\Users\sinensia100\" & nombreFichero)
