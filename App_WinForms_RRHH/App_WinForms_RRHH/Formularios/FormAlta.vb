@@ -5,7 +5,6 @@ Public Class Form_Alta
         Try
             Dim nuevoEmpleado As Empleado = New Empleado()
 
-            ' Asignamos valores
             nuevoEmpleado.nombre = txtNombre.Text
             nuevoEmpleado.apellidos = txtApellidos.Text
             nuevoEmpleado.genero = cmbGenero.SelectedIndex + 1

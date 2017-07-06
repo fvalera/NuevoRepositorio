@@ -87,7 +87,6 @@ Partial Class FormModificacion
         '
         'cmbGenero
         '
-        Me.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGenero.FormattingEnabled = True
         Me.cmbGenero.Items.AddRange(New Object() {"Varón", "Mujer", "Hermafrodita"})
         Me.cmbGenero.Location = New System.Drawing.Point(90, 92)

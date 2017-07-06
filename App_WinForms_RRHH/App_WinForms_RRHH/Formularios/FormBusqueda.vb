@@ -15,6 +15,11 @@ Public Class FormBusqueda
             ActivateMdiChild(form)
         End If
     End Sub
+    Private Sub AbrirFormMod(ByRef form As Form)
+        form = New FormModificacion
+        form.MdiParent = MDIPrincipal
+        form.Show()
+    End Sub
     Private Sub ComboBox1_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged, txtApellidos.TextChanged
         BuscarEmpleado()
     End Sub
@@ -57,11 +62,12 @@ Public Class FormBusqueda
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
         For Each indice In listResultados.SelectedIndices
-            AbrirFormulario(Of FormModificacion)(frmMod)
+            AbrirFormMod(frmMod)
             frmMod.txtNombre.Text = listaEmpleados(indice).nombre
             frmMod.txtApellidos.Text = listaEmpleados(indice).apellidos
-            frmMod.cmbGenero.Text = listaEmpleados(indice).genero
-            frmMod.domCategoría.Text = listaEmpleados(indice).categoria
+            frmMod.cmbGenero.Text = listaEmpleados(indice).genero.ToString
+            frmMod.domCategoría.Text = listaEmpleados(indice).categoria.ToString
+            frmMod.empleadoOrigen = New Empleado(listaEmpleados(indice).nombre, listaEmpleados(indice).apellidos, listaEmpleados(indice).genero, listaEmpleados(indice).categoria)
         Next
     End Sub
 End Class

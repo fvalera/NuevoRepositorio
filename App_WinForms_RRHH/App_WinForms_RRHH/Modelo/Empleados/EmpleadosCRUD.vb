@@ -69,6 +69,10 @@
             listaEmpleados(indice) = empleado
         End Sub
 
+        Sub Actualizar(empOrigen As Empleado, empleadoModificado As Empleado)
+            Actualizar(listaEmpleados.IndexOf(empOrigen), empleadoModificado)
+        End Sub
+
         Sub Eliminar(indice As Integer)
             If indice >= 0 Then
                 listaEmpleados.RemoveAt(indice)

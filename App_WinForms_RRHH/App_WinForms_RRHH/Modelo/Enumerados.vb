@@ -11,7 +11,7 @@
     End Enum
     Public Enum TipoCategoria
         JefeEquipo = 1
-        Tecnico = 2
+        Técnico = 2
         Administrativo = 3
     End Enum
 End Namespace

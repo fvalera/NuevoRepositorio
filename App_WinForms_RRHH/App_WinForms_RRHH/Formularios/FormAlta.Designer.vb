@@ -99,7 +99,7 @@ Partial Class Form_Alta
         '
         'domCategoría
         '
-        Me.domCategoría.Items.Add("Jefe de Equipo")
+        Me.domCategoría.Items.Add("JefeEquipo")
         Me.domCategoría.Items.Add("Técnico")
         Me.domCategoría.Items.Add("Administrativo")
         Me.domCategoría.Location = New System.Drawing.Point(67, 139)
