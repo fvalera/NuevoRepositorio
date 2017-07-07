@@ -70,4 +70,8 @@ Public Class FormBusqueda
             frmMod.empleadoOrigen = listaEmpleados(indice)
         Next
     End Sub
+
+    Private Sub FormBusqueda_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        BuscarEmpleado()
+    End Sub
 End Class
