@@ -34,6 +34,9 @@ Partial Class FormExcel
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -102,7 +105,7 @@ Partial Class FormExcel
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(90, 153)
+        Me.TextBox5.Location = New System.Drawing.Point(90, 144)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(161, 20)
         Me.TextBox5.TabIndex = 8
@@ -110,7 +113,7 @@ Partial Class FormExcel
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 160)
+        Me.Label5.Location = New System.Drawing.Point(25, 147)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 13)
         Me.Label5.TabIndex = 9
@@ -127,18 +130,46 @@ Partial Class FormExcel
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(105, 202)
+        Me.Button2.Location = New System.Drawing.Point(90, 200)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Leer"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(176, 200)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 12
+        Me.Button3.Text = "Escribir"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(25, 173)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(48, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Escritura"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(90, 170)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(161, 20)
+        Me.TextBox6.TabIndex = 13
+        '
         'FormExcel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(351, 261)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
@@ -170,4 +201,7 @@ Partial Class FormExcel
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox6 As TextBox
 End Class

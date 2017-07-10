@@ -54,9 +54,9 @@ Partial Class MDIPrincipal
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AltaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -89,6 +89,9 @@ Partial Class MDIPrincipal
         Me.BajaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.ImportarExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportarExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -107,7 +110,7 @@ Partial Class MDIPrincipal
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.ToolStripSeparator3, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator4, Me.PrintToolStripMenuItem, Me.PrintPreviewToolStripMenuItem, Me.PrintSetupToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.ToolStripSeparator3, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator4, Me.ImportarExcelToolStripMenuItem, Me.ExportarExcelToolStripMenuItem, Me.ToolStripSeparator5, Me.PrintToolStripMenuItem, Me.PrintPreviewToolStripMenuItem, Me.PrintSetupToolStripMenuItem, Me.ToolStripSeparator9, Me.ExitToolStripMenuItem})
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(60, 20)
@@ -314,6 +317,14 @@ Partial Class MDIPrincipal
         Me.BajaToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.BajaToolStripMenuItem.Text = "Baja"
         '
+        'ListarToolStripMenuItem
+        '
+        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
+        Me.ListarToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.ListarToolStripMenuItem.Text = "Listar"
+        '
         'ModificaciónToolStripMenuItem
         '
         Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
@@ -325,14 +336,6 @@ Partial Class MDIPrincipal
         Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
         Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.BuscarToolStripMenuItem.Text = "Buscar"
-        '
-        'ListarToolStripMenuItem
-        '
-        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'ToolsMenu
         '
@@ -553,6 +556,23 @@ Partial Class MDIPrincipal
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Enlace BBVA"
         '
+        'ImportarExcelToolStripMenuItem
+        '
+        Me.ImportarExcelToolStripMenuItem.Name = "ImportarExcelToolStripMenuItem"
+        Me.ImportarExcelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ImportarExcelToolStripMenuItem.Text = "Importar Excel"
+        '
+        'ExportarExcelToolStripMenuItem
+        '
+        Me.ExportarExcelToolStripMenuItem.Name = "ExportarExcelToolStripMenuItem"
+        Me.ExportarExcelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ExportarExcelToolStripMenuItem.Text = "Exportar Excel"
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(203, 6)
+        '
         'MDIPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -641,4 +661,7 @@ Partial Class MDIPrincipal
     Friend WithEvents ListarToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents CambiarFuenteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImportarExcelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExportarExcelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
 End Class

@@ -13,4 +13,8 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox5.Text = LectorExcel.DameValorCelda(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Escritor.NuevoExcelFijo(TextBox1.Text)
+    End Sub
 End Class

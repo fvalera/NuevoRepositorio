@@ -48,7 +48,6 @@ Public Class FormBusqueda
         For Each indice In listResultados.SelectedIndices
             listaEmpleados.RemoveAt(indice)
         Next
-        EmpleadosCRUD.Grabar()
     End Sub
 
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click

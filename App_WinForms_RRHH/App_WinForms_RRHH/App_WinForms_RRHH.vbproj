@@ -94,6 +94,8 @@
     <Compile Include="Formularios\FormModificacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modelo\Empleados\EmpleadosExcel.vb" />
+    <Compile Include="Modelo\IPersistenciaEmpleados.vb" />
     <Compile Include="MDIPrincipal.Designer.vb">
       <DependentUpon>MDIPrincipal.vb</DependentUpon>
     </Compile>

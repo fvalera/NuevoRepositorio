@@ -6,20 +6,20 @@
     Module EmpleadosCRUD
         Private listaEmpleados As List(Of Empleado)
 
-        Public Sub Restaurar()
+        Public Sub Restaurar(persistenciaEmpleados As IPersistenciaEmpleados)
             listaEmpleados = New List(Of Empleado)()
 
             Dim arrayEmpleados() As Empleado
             arrayEmpleados = listaEmpleados.ToArray()
-            EmpleadosFichero.LeerFichero(arrayEmpleados)
+            persistenciaEmpleados.Importar(arrayEmpleados)
             listaEmpleados = arrayEmpleados.ToList()
         End Sub
         Sub Crear(nuevoEmpleado As Empleado)
             ' Asignamos nuevo empleado
             listaEmpleados.Add(nuevoEmpleado)
         End Sub
-        Sub Grabar()
-            EmpleadosFichero.GrabarFichero(listaEmpleados.ToArray())
+        Sub Grabar(persistenciaEmpleados As IPersistenciaEmpleados)
+            persistenciaEmpleados.Exportar(listaEmpleados.ToArray())
         End Sub
         Function Cantidad() As Integer
             Return listaEmpleados.Count

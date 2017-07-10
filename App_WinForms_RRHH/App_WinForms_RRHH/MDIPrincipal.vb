@@ -2,6 +2,10 @@
 Imports App_WinForms_RRHH.Modelo
 
 Public Class MDIPrincipal
+
+    Private empleadosFichero As New EmpleadosFichero
+    Private empleadosExcel As New EmpleadosExcel
+
     Dim frmAlta As Form_Alta
     Dim frmLista As FormBusqueda
     Private Sub AbrirFormulario(Of TForm As {Form, New})(ByRef form As Form)
@@ -47,33 +51,54 @@ Public Class MDIPrincipal
         ChildForm.Show()
     End Sub
 
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
+    Public Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
+        empleadosFichero.NombreFichero = DialogoAbrirFichero("csv")
+        EmpleadosCRUD.Restaurar(empleadosFichero)
+    End Sub
+
+    Function DialogoAbrirFichero(extension As String) As String
         Dim OpenFileDialog As New OpenFileDialog
         OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        OpenFileDialog.Filter = "Archivos CSV (*.csv)|*.txt|Todos los archivos (*.*)|*.*"
+        OpenFileDialog.Filter = "Archivos de texto (*." & extension & ")|*." & extension & "|Todos los archivos (*.*)|*.*"
         OpenFileDialog.CheckFileExists = True
         If (OpenFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
             Dim FileName As String = OpenFileDialog.FileName
-            EmpleadosFichero.nombreFichero = FileName
-            EmpleadosCRUD.Restaurar()
             EmpleadoToolStripMenuItem.Enabled = True
-            ' TODO: agregue código aquí para abrir el archivo.
+            Return OpenFileDialog.FileName
+        Else
+            Return ""
         End If
-    End Sub
+    End Function
 
     Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+        empleadosFichero.NombreFichero = DialogoGuardarFichero("csv")
+        EmpleadosCRUD.Grabar(empleadosFichero)
+    End Sub
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        empleadosFichero.NombreFichero = DialogoGuardarFichero("csv")
+        EmpleadosCRUD.Grabar(empleadosFichero)
+    End Sub
+    Function DialogoGuardarFichero(extension As String) As String
         Dim SaveFileDialog As New SaveFileDialog
-        SaveFileDialog.InitialDirectory = EmpleadosFichero.nombreFichero
-        SaveFileDialog.Filter = "Archivos CSV (*.csv)|*.txt|Todos los archivos (*.*)|*.*"
+        SaveFileDialog.InitialDirectory = empleadosFichero.NombreFichero
+        SaveFileDialog.Filter = "Archivos de texto (*." & extension & ")|*." & extension & "|Todos los archivos (*.*)|*.*"
 
         If (SaveFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
             Dim FileName As String = SaveFileDialog.FileName
-            EmpleadosFichero.nombreFichero = FileName
-            EmpleadosCRUD.Grabar()
-            ' TODO: agregue código aquí para guardar el contenido actual del formulario en un archivo.
+            Return SaveFileDialog.FileName
+        Else
+            Return ""
         End If
+    End Function
+    Private Sub ImportarExcelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportarExcelToolStripMenuItem.Click
+        empleadosFichero.NombreFichero = DialogoAbrirFichero("xls")
+        EmpleadosCRUD.Restaurar(empleadosFichero)
     End Sub
 
+    Private Sub ExportarExcelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportarExcelToolStripMenuItem.Click
+        empleadosFichero.NombreFichero = DialogoGuardarFichero("xls")
+        EmpleadosCRUD.Grabar(empleadosFichero)
+    End Sub
 
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
@@ -140,7 +165,4 @@ Public Class MDIPrincipal
         End If
     End Sub
 
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        EmpleadosCRUD.Grabar()
-    End Sub
 End Class
