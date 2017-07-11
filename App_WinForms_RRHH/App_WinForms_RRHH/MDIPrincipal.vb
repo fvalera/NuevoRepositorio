@@ -35,9 +35,14 @@ Public Class MDIPrincipal
     Private Sub MDIPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ContextMenuStrip = ContextMenuStrip1
         EmpleadoToolStripMenuItem.Enabled = False
+        EmpleadosCRUD.avisarEnModificacion = AddressOf HabilitarMenu
     End Sub
 
-
+    Sub HabilitarMenu(estado As Boolean)
+        SaveToolStripMenuItem.Enabled = estado
+        SaveAsToolStripMenuItem.Enabled = estado
+        ExportarExcelToolStripMenuItem.Enabled = estado
+    End Sub
     'Código autogenerado
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Cree una nueva instancia del formulario secundario.
@@ -54,6 +59,9 @@ Public Class MDIPrincipal
     Public Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
         empleadosFichero.NombreFichero = DialogoAbrirFichero("csv")
         EmpleadosCRUD.Restaurar(empleadosFichero)
+        SaveToolStripMenuItem.Enabled = True
+        SaveAsToolStripMenuItem.Enabled = True
+        ExportarExcelToolStripMenuItem.Enabled = True
     End Sub
 
     Function DialogoAbrirFichero(extension As String) As String
@@ -91,13 +99,14 @@ Public Class MDIPrincipal
         End If
     End Function
     Private Sub ImportarExcelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportarExcelToolStripMenuItem.Click
-        empleadosFichero.NombreFichero = DialogoAbrirFichero("xls")
-        EmpleadosCRUD.Restaurar(empleadosFichero)
+        empleadosExcel.nombreFichero = DialogoAbrirFichero("xls")
+        EmpleadosCRUD.Restaurar(empleadosExcel)
+
     End Sub
 
     Private Sub ExportarExcelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportarExcelToolStripMenuItem.Click
-        empleadosFichero.NombreFichero = DialogoGuardarFichero("xls")
-        EmpleadosCRUD.Grabar(empleadosFichero)
+        empleadosExcel.nombreFichero = DialogoGuardarFichero("xls")
+        EmpleadosCRUD.Grabar(empleadosExcel)
     End Sub
 
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click

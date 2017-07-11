@@ -33,10 +33,13 @@ Partial Class MDIPrincipal
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ImportarExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportarExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -89,9 +92,6 @@ Partial Class MDIPrincipal
         Me.BajaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.ImportarExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExportarExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -141,6 +141,7 @@ Partial Class MDIPrincipal
         '
         'SaveToolStripMenuItem
         '
+        Me.SaveToolStripMenuItem.Enabled = False
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
@@ -150,6 +151,7 @@ Partial Class MDIPrincipal
         '
         'SaveAsToolStripMenuItem
         '
+        Me.SaveAsToolStripMenuItem.Enabled = False
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
         Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.SaveAsToolStripMenuItem.Text = "Guardar &como"
@@ -158,6 +160,24 @@ Partial Class MDIPrincipal
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(203, 6)
+        '
+        'ImportarExcelToolStripMenuItem
+        '
+        Me.ImportarExcelToolStripMenuItem.Name = "ImportarExcelToolStripMenuItem"
+        Me.ImportarExcelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ImportarExcelToolStripMenuItem.Text = "Importar Excel"
+        '
+        'ExportarExcelToolStripMenuItem
+        '
+        Me.ExportarExcelToolStripMenuItem.Enabled = False
+        Me.ExportarExcelToolStripMenuItem.Name = "ExportarExcelToolStripMenuItem"
+        Me.ExportarExcelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ExportarExcelToolStripMenuItem.Text = "Exportar Excel"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(203, 6)
         '
         'PrintToolStripMenuItem
         '
@@ -182,10 +202,10 @@ Partial Class MDIPrincipal
         Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.PrintSetupToolStripMenuItem.Text = "Configurar impresión"
         '
-        'ToolStripSeparator5
+        'ToolStripSeparator9
         '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(203, 6)
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(203, 6)
         '
         'ExitToolStripMenuItem
         '
@@ -555,23 +575,6 @@ Partial Class MDIPrincipal
         Me.LinkLabel1.TabIndex = 13
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Enlace BBVA"
-        '
-        'ImportarExcelToolStripMenuItem
-        '
-        Me.ImportarExcelToolStripMenuItem.Name = "ImportarExcelToolStripMenuItem"
-        Me.ImportarExcelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.ImportarExcelToolStripMenuItem.Text = "Importar Excel"
-        '
-        'ExportarExcelToolStripMenuItem
-        '
-        Me.ExportarExcelToolStripMenuItem.Name = "ExportarExcelToolStripMenuItem"
-        Me.ExportarExcelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.ExportarExcelToolStripMenuItem.Text = "Exportar Excel"
-        '
-        'ToolStripSeparator9
-        '
-        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(203, 6)
         '
         'MDIPrincipal
         '

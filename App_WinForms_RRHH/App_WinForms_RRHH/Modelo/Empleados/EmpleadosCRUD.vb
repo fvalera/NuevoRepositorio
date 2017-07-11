@@ -1,10 +1,13 @@
 ﻿Namespace Modelo
 
+    Delegate Sub TipoDelegadoAvisarEnModificacion(estado As Boolean)
+
     ' CRUD
     ' Create, Read, Update, Delete
     ' Crear, Leer, Actualizar, Eliminar
     Module EmpleadosCRUD
         Private listaEmpleados As List(Of Empleado)
+        Public avisarEnModificacion As TipoDelegadoAvisarEnModificacion
 
         Public Sub Restaurar(persistenciaEmpleados As IPersistenciaEmpleados)
             listaEmpleados = New List(Of Empleado)()
@@ -13,6 +16,7 @@
             arrayEmpleados = listaEmpleados.ToArray()
             persistenciaEmpleados.Importar(arrayEmpleados)
             listaEmpleados = arrayEmpleados.ToList()
+            avisarEnModificacion(True)
         End Sub
         Sub Crear(nuevoEmpleado As Empleado)
             ' Asignamos nuevo empleado
