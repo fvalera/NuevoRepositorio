@@ -5,6 +5,8 @@ Public Class MDIPrincipal
 
     Private empleadosFichero As New EmpleadosFichero
     Private empleadosExcel As New EmpleadosExcel
+    Private empleadosAccess As New EmpleadosAccess
+    Private empleadosGenerador As New EmpleadosGenerador
 
     Dim frmAlta As Form_Alta
     Dim frmLista As FormBusqueda
@@ -42,6 +44,8 @@ Public Class MDIPrincipal
         SaveToolStripMenuItem.Enabled = estado
         SaveAsToolStripMenuItem.Enabled = estado
         ExportarExcelToolStripMenuItem.Enabled = estado
+        ExportarAccessToolStripMenuItem.Enabled = estado
+        SaveToolStripButton.Enabled = estado
     End Sub
     'Código autogenerado
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
@@ -59,9 +63,8 @@ Public Class MDIPrincipal
     Public Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
         empleadosFichero.NombreFichero = DialogoAbrirFichero("csv")
         EmpleadosCRUD.Restaurar(empleadosFichero)
-        SaveToolStripMenuItem.Enabled = True
-        SaveAsToolStripMenuItem.Enabled = True
-        ExportarExcelToolStripMenuItem.Enabled = True
+        HabilitarMenu(True)
+
     End Sub
 
     Function DialogoAbrirFichero(extension As String) As String
@@ -101,7 +104,7 @@ Public Class MDIPrincipal
     Private Sub ImportarExcelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportarExcelToolStripMenuItem.Click
         empleadosExcel.nombreFichero = DialogoAbrirFichero("xls")
         EmpleadosCRUD.Restaurar(empleadosExcel)
-
+        HabilitarMenu(True)
     End Sub
 
     Private Sub ExportarExcelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportarExcelToolStripMenuItem.Click
@@ -174,4 +177,20 @@ Public Class MDIPrincipal
         End If
     End Sub
 
+    Private Sub ImportarAccessToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportarAccessToolStripMenuItem.Click
+        empleadosAccess.nombreFichero = DialogoAbrirFichero("mdb")
+        EmpleadosCRUD.Restaurar(empleadosAccess)
+        HabilitarMenu(True)
+    End Sub
+
+
+    Private Sub ExportarAccessToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportarAccessToolStripMenuItem.Click
+        empleadosAccess.nombreFichero = DialogoGuardarFichero("mdb")
+        EmpleadosCRUD.Grabar(empleadosAccess)
+    End Sub
+
+    Private Sub GenerarEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerarEmpleadosToolStripMenuItem.Click
+        EmpleadosCRUD.Restaurar(empleadosGenerador)
+        HabilitarMenu(True)
+    End Sub
 End Class

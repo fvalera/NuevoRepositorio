@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpleadosGenerador.vb" />
     <Compile Include="Formularios\FormAlta.Designer.vb">
       <DependentUpon>FormAlta.vb</DependentUpon>
     </Compile>
@@ -94,6 +95,7 @@
     <Compile Include="Formularios\FormModificacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modelo\EmpleadosAccess.vb" />
     <Compile Include="Modelo\Empleados\EmpleadosExcel.vb" />
     <Compile Include="Modelo\IPersistenciaEmpleados.vb" />
     <Compile Include="MDIPrincipal.Designer.vb">
